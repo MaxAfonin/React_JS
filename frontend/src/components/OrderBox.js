@@ -12,7 +12,7 @@ function OrderBox({ setModalBox, setMessage, setBasket, setBasketQty, setBasketP
         const validCvc = cvc.match(/^[0-9]{3,4}$/)
 
         if (!validNum || !validExp || !validCvc) {
-            document.getElementById('orderError').innerText = "Вы ввели данные неправильно!"
+            document.getElementById('orderError').innerText = "Ошибка. Проверьте правильность введенных данных"
             return
         }
 

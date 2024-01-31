@@ -7,7 +7,7 @@ function Header({ setPage, setModalBox, token, setToken }) {
     if (token !== null) {
       return (
         <>
-          <li onClick={() => setPage('Basket')}>Корзина</li>
+          <li onClick={() => setPage('Basket')}>Ваша корзина</li>
         </>
       )
     }
@@ -15,12 +15,19 @@ function Header({ setPage, setModalBox, token, setToken }) {
 
   return (
     <div className="Header">
-      <ul>
-        <li onClick={() => setPage('Main')}>Главная</li>
-        <BasketLink />
-      </ul>
-      <UserBox setModalBox={setModalBox} token={token} setToken={setToken} setPage={setPage} />
-    </div>
+      <div class="topbar"><UserBox setModalBox={setModalBox} token={token} setToken={setToken} setPage={setPage} /></div>
+      <div class="mainheader">
+        <div class="logo">
+        <p>Реактивный магазин</p>
+        </div>
+        <nav>
+          <ul>
+            <BasketLink />
+            <li onClick={() => setPage('Main')}>На Главную</li>
+          </ul>
+        </nav>
+      </div>
+     </div>
   );
 }
 

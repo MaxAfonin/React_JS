@@ -1,8 +1,14 @@
 .Basket {
     width: 100%;
     min-height: calc(100vh - 50px - 50px);
-    background-color: #ffffff;
+    background-color: #f7f4ed;
     padding-top: 30px;
+}
+
+.Basket h1 {
+    font-size: 32px;
+    line-height: 60px;
+    color: #674d0b;
 }
 
 .BasketContent {
@@ -15,15 +21,15 @@
 .Basket .order {
     height: 50px;
     width: 200px;
-    margin-top: 15px;
+    margin: 15px 0;
     border-style: none;
-    background-color: #aad7fa;
+    background-color: #cdb885;
     border-radius: 10px;
-    font-size: 16pt;
+    font-size: 16px;
 }
 
 .Basket .order:hover {
-    background-color: #78abd1;
+    background-color: #a78f53;
 }
 
 @media (max-width: 768px) {

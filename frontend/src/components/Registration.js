@@ -14,7 +14,7 @@ function Registration({ setModalBox, setMessage }) {
     let message
 
     if (!validEmail || !validLogin || password.length === 0) {
-      document.getElementById('loginError').innerText = "Вы ввели данные неправильно!"
+      document.getElementById('loginError').innerText = "Одно или несколько полей заполнены неправильно"
       return
     }
 
@@ -50,7 +50,7 @@ function Registration({ setModalBox, setMessage }) {
       <input id='email' placeholder='E-Mail' type='email' />
       <input id='login' placeholder='Логин' type='text' />
       <input id='pass' placeholder='Пароль' type='password' />
-      <button id='send' onClick={() => Reg()}>Войти</button>
+      <button id='send' onClick={() => Reg()}>Зарегистрироваться</button>
       <p id='loginError'></p>
     </div>
   );

@@ -1,7 +1,7 @@
 .OrderBox {
     display: flex;
     flex-direction: column;
-    margin: 5% 15%;
+    margin: 30px 50px;
 }
 
 .OrderBox h1 {
@@ -9,26 +9,30 @@
 }
 
 .OrderBox input {
-    height: 30px;
-    width: auto;
-    margin-bottom: 20px;
-    border-radius: 10px;
+    height: 50px;
+    text-align: center;
+    width: 300px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
 .OrderBox button {
-    height: 30px;
-    width: auto;
-    border-radius: 10px;
-    font-size: 14pt;
-    background-color: #72bbf4;
+    height: 50px;
+    width: 300px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #cdb885;
     border-style: none;
 }
 
 .OrderBox button:hover {
-    background-color: #51aaef;
+    background-color: #a78f53;
 }
 
 .OrderBox #orderError {
     color: red;
     margin-top: 10px;
+    width: 300px;
 }

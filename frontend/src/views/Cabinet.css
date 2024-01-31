@@ -13,10 +13,12 @@
 }
 
 .Cabinet input {
-    height: 30px;
+    height: 50px;
+    text-align: center;
     width: 300px;
     margin-bottom: 10px;
-    border-radius: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
 .Cabinet p {
@@ -24,15 +26,15 @@
 }
 
 .Cabinet button {
-    height: 30px;
+    height: 50px;
     width: 300px;
     margin-bottom: 10px;
-    border-radius: 10px;
-    font-size: 14pt;
-    background-color: #72bbf4;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #cdb885;
     border-style: none;
 }
 
 .Cabinet button:hover {
-    background-color: #51aaef;
+    background-color: #a78f53;
 }

@@ -19,8 +19,8 @@ function Basket({ basket, setBasket, basketPrice, setBasketPrice, basketQty, set
           setBasketPrice={setBasketPrice}
           setBasketQty={setBasketQty} />)}
       </div>
-      <p>Количество товаров: {basketQty}</p>
-      <p>Общая стоимость товаров: {basketPrice}</p>
+      <h2>Всего товаров: {basketQty}</h2>
+      <h2>На общую стоимость: {basketPrice} ₽</h2>
       <ShowOrderButton />
     </div>
   );

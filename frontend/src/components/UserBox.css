@@ -1,25 +1,41 @@
 .UserBox {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    width:100%;
+    display: block;
+    align-items: right;
 }
 
 .UserBox p {
     margin-right: 10px;
     margin-left: 10px;
+    color: #FFF;
+    line-height: 30px;
+    font-size: 11px;
 }
 
 .UserBox button {
     width: 150px;
-    height: 40px;
+    height: 30px;
     margin: 5px;
-    background-color: #72bbf4;
-    border-radius: 10px;
+    background-color: #565757;
+    color: #FFF;
+    border-radius: 3px;
     border-style: none;
+    cursor: pointer;
+    float: right;
+}
+
+.logintext {
+    margin-right: 10px;
+    margin-left: 10px;
+    color: #FFF;
+    line-height: 40px;
+    font-size: 14px;
+    float: right;
 }
 
 .UserBox button:hover {
-    background-color: #51aaef;
+    background-color: #e1d3b0;
+    color: #000;
 }
 
 @media (max-width: 426px) {

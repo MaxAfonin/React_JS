@@ -29,7 +29,7 @@ function ProductBasket({ id, image, title, price, setBasket, setBasketPrice, set
     <div className="ProductBasket">
       <img src={image} alt='Изображение товара' />
       <h1>{title}</h1>
-      <p>{price} рублей</p>
+      <h2>{price} ₽</h2>
       <button className='del' onClick={() => deleteBasket()}>Удалить</button>
       <div className='basketQty'>
         <button className='minus' onClick={() => minus()}>-</button>

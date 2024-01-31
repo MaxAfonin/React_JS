@@ -2,6 +2,7 @@ import React from 'react';
 import './Cabinet.css';
 import { jwtDecode } from 'jwt-decode';
 
+
 function Cabinet({ token }) {
     function changeEmail() {
         const email = document.getElementById('email').value
@@ -9,7 +10,7 @@ function Cabinet({ token }) {
         const validEmail = email.match(/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/g)
 
         if (!validEmail) {
-            document.getElementById('emailMessage').innerText = "Вы ввели данные неправильно!"
+            document.getElementById('emailMessage').innerText = "Email указан неверно"
             return
         }
 
@@ -40,7 +41,7 @@ function Cabinet({ token }) {
         const pass = document.getElementById('pass').value
 
         if (pass.length === 0) {
-            document.getElementById('emailMessage').innerText = "Вы ввели данные неправильно!"
+            document.getElementById('emailMessage').innerText = "Пароль указан неверно"
             return
         }
 
@@ -71,11 +72,11 @@ function Cabinet({ token }) {
     return (
         <div className="Cabinet">
             <h1>Личный кабинет</h1>
-            <p id='showEmail'>Ваш E-Mail: {jwtDecode(token).email}</p>
-            <input id='email' placeholder='E-Mail' type='email' />
-            <button id='sendEmail' onClick={changeEmail}>Сменить E-Mail</button>
+            <p id='showEmail'>Ваш текущий email: {jwtDecode(token).email}</p>
+            <input id='email' placeholder='Новый email' type='email' />
+            <button id='sendEmail' onClick={changeEmail}>Сменить email</button>
             <p id='emailMessage'></p>
-            <input id='pass' placeholder='Пароль' type='password' />
+            <input id='pass' placeholder='Новый пароль' type='password' />
             <button id='sendPass' onClick={changePass}>Сменить пароль</button>
             <p id='passMessage'></p>
         </div>

@@ -1,5 +1,5 @@
 .ModalBox {
-    min-width: 300px;
+    min-width: 400px;
     height: auto;
     min-height: 150px;
     border-radius: 10px;
@@ -17,5 +17,5 @@
     top: 0;
     left: 0;
     background-color: #000;
-    opacity: 50%;
+    opacity: 40%;
 }

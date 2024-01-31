@@ -42,10 +42,10 @@ app.post('/registration', async (req, res) => {
         //duplicate key
         if (err && err.code === 11000) {
             res.json({
-                message: 'Попытка создания дубликата!'
+                message: 'Ошибка! Такой уже существует'
             })
                 .status(400)
-            console.error('Попытка создания дубликата!')
+            console.error('Ошибка! Такой уже существует')
 
             return
         }
@@ -81,7 +81,7 @@ app.post('/login', async (req, res) => {
     const jwtToken = generateAccessToken(user._id, user.login, user.email)
 
     res.json({
-        message: 'Вы успешно вошли на сайт!',
+        message: 'Вы успешно вошли на сайт',
         token: jwtToken
     })
 })
@@ -97,7 +97,7 @@ app.post('/user/changePassword', async (req, res) => {
 
         if (user === null) {
             res.json({
-                message: 'Пользователь не найден!'
+                message: 'Пользователь не найден'
             })
                 .status(400)
         }
@@ -111,7 +111,7 @@ app.post('/user/changePassword', async (req, res) => {
     }
 
     res.json({
-        message: 'Пароль изменён!',
+        message: 'Пароль успешно изменён',
         newPassword: user.password
     })
 })
@@ -144,10 +144,10 @@ app.post('/user/changeEmail', async (req, res) => {
         //duplicate key
         if (err && err.code === 11000) {
             res.json({
-                message: 'Попытка создания дубликата!'
+                message: 'Ошибка! Такой уже существует'
             })
                 .status(400)
-            console.error('Попытка создания дубликата!')
+            console.error('Ошибка! Такой уже существует')
 
             return
         }
@@ -206,7 +206,7 @@ app.post('/products/add', async (req, res) => {
     }
 
     res.json({
-        message: 'Товар успешно добавлен! Обновите страницу для получения изменений.'
+        message: 'Товар добавлен. Обновите страницу.'
     })
 })
 

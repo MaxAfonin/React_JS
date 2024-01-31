@@ -12,7 +12,7 @@ function AddProductBox({ setModalBox, setMessage }) {
     let message
 
     if (!validPrice || title.length === 0) {
-      document.getElementById('addProductError').innerText = "Вы ввели данные неправильно!"
+      document.getElementById('addProductError').innerText = "Ошибка. Проверьте правильность введенных данных"
       return
     }
 

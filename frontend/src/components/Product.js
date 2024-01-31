@@ -23,7 +23,7 @@ function Product({ id, image, title, price, setBasket, setBasketPrice, setBasket
     }
 
     setTimeout(() => {
-      setMessage('Товар добавлен в корзину.')
+      setMessage('Товар успешно добавлен в корзину')
       setModalBox('MessageBox')
     }, 100)
   }
@@ -32,13 +32,13 @@ function Product({ id, image, title, price, setBasket, setBasketPrice, setBasket
     if (token !== null) {
       return (
         <>
-          <button className='buy' onClick={() => addToBasket()}>Купить</button>
+          <button className='buy' onClick={() => addToBasket()}>В корзину</button>
         </>
       )
     } else {
       return (
         <>
-          <p>Для добавления товара в корзину авторизуйтесь!</p>
+          <p>Авторизуйтесь, чтобы купить</p>
         </>
       )
     }
@@ -48,7 +48,7 @@ function Product({ id, image, title, price, setBasket, setBasketPrice, setBasket
     <div className="Product">
       <img src={product.image} alt='Изображение товара' />
       <h1>{product.title}</h1>
-      <p>{product.price} рублей</p>
+      <h2>{product.price} ₽</h2>
       <AddToBasketButton />
     </div>
   );

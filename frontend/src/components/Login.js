@@ -12,7 +12,7 @@ function Login({ setModalBox, setToken, setMessage }) {
     let message
 
     if (!validLogin || password.length === 0) {
-      document.getElementById('loginError').innerText = "Вы ввели данные неправильно!"
+      document.getElementById('loginError').innerText = "Логин либо пароль не верен!"
       return
     }
 
@@ -21,7 +21,6 @@ function Login({ setModalBox, setToken, setMessage }) {
       password: password
     }
 
-    // console.debug(data)
 
     const api = 'http://127.0.0.1:9001/login'
 
